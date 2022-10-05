@@ -1,0 +1,33 @@
+|DUT
+input_vector[0] => L_gate:add_instance.D
+input_vector[1] => L_gate:add_instance.S
+output_vector[0] <= L_gate:add_instance.I_0
+output_vector[1] <= L_gate:add_instance.I_1
+
+
+|DUT|L_gate:add_instance
+S => INVERTER:INV1.A
+S => AND_2:AND2.A
+D => AND_2:AND1.B
+D => AND_2:AND2.B
+I_0 <= AND_2:AND1.Y
+I_1 <= AND_2:AND2.Y
+
+
+|DUT|L_gate:add_instance|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|L_gate:add_instance|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|L_gate:add_instance|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

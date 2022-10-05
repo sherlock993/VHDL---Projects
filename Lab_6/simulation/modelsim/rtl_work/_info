@@ -1,0 +1,220 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/ACADEMICS/EE214/Quartus/Projects/Lab_6/simulation/modelsim
+Ealu_beh
+Z1 w1662723990
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
+R0
+Z4 8D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/Lab_6.vhd
+Z5 FD:/ACADEMICS/EE214/Quartus/Projects/Lab_6/Lab_6.vhd
+l0
+L5 1
+VM`WXiH4X6QIW2:XFM6kQU0
+!s100 mQ>?J4gX3=4LmiDc?E31;0
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1664114696
+!i10b 1
+Z8 !s108 1664114696.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/Lab_6.vhd|
+Z10 !s107 D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/Lab_6.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aa1
+R2
+R3
+DEx4 work 7 alu_beh 0 22 M`WXiH4X6QIW2:XFM6kQU0
+!i122 4
+l121
+L17 139
+Vg5NPI3^Dg1ZFW^19`z^>>2
+!s100 lfmO6K7fWKEU7:1h>:N2_1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut
+Z13 w1662720292
+R2
+R3
+!i122 3
+R0
+Z14 8D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/DUT.vhdl
+Z15 FD:/ACADEMICS/EE214/Quartus/Projects/Lab_6/DUT.vhdl
+l0
+L7 1
+Vf0f??JO:^MaZ5lJo4Y5T22
+!s100 OJ6@F0:^KVkhCjkzjX@fl3
+R6
+31
+R7
+!i10b 1
+Z16 !s108 1664114695.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/DUT.vhdl|
+Z18 !s107 D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/DUT.vhdl|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 f0f??JO:^MaZ5lJo4Y5T22
+!i122 3
+l20
+L14 22
+ViM70@=U<LDo@=<S9gZWa;3
+!s100 3HmM8dOHR_1gS5jXVOGQ03
+R6
+31
+R7
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R11
+R12
+Etestbench
+Z19 w1662719879
+R3
+R2
+!i122 5
+R0
+Z20 8D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/Testbench.vhdl
+Z21 FD:/ACADEMICS/EE214/Quartus/Projects/Lab_6/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-93|-work|work|D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/Testbench.vhdl|
+!s107 D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 5
+l69
+L9 132
+V=l3F:1>OPGFI`j9zzVHbJ3
+!s100 >DW1hT;MPQ0XIMzVhA?om0
+R6
+31
+R7
+!i10b 1
+R8
+R22
+Z23 !s107 D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/Testbench.vhdl|
+!i113 1
+R11
+R12
+Etoplevel
+Z24 w1662724333
+Z25 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 2
+R0
+Z26 8D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/TopLevel.vhdl
+Z27 FD:/ACADEMICS/EE214/Quartus/Projects/Lab_6/TopLevel.vhdl
+l0
+L5 1
+VRW=hg7X2^>c3bX1h9KmmK0
+!s100 gJ^gg3F;Qe=>jcbTR:JjO3
+R6
+31
+Z28 !s110 1664114695
+!i10b 1
+R16
+Z29 !s90 -reportprogress|300|-93|-work|work|D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/TopLevel.vhdl|
+Z30 !s107 D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/TopLevel.vhdl|
+!i113 1
+R11
+R12
+Astruct
+R25
+R2
+R3
+DEx4 work 8 toplevel 0 22 RW=hg7X2^>c3bX1h9KmmK0
+!i122 2
+l75
+L13 146
+VMhMeXkX91GjKgaMKb7Q@F0
+!s100 9flCfZ<J0<F9<abDIPzo00
+R6
+31
+R28
+!i10b 1
+R16
+R29
+R30
+!i113 1
+R11
+R12
+Ev_jtag
+Z31 w1662115034
+R25
+R2
+R3
+!i122 1
+R0
+Z32 8D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/v_jtag.vhd
+Z33 FD:/ACADEMICS/EE214/Quartus/Projects/Lab_6/v_jtag.vhd
+l0
+L9 1
+VK7J:B[m3^:cB1Km[I3N602
+!s100 C:GMYKMFIUkIMaKNS>ek<2
+R6
+31
+R28
+!i10b 1
+R16
+Z34 !s90 -reportprogress|300|-93|-work|work|D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/v_jtag.vhd|
+Z35 !s107 D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/v_jtag.vhd|
+!i113 1
+R11
+R12
+Artl
+R25
+R2
+R3
+DEx4 work 6 v_jtag 0 22 K7J:B[m3^:cB1Km[I3N602
+!i122 1
+l85
+L44 83
+VJODH=ZQLe0=R51Pn2gWGM3
+!s100 QN^;ea;8E9NBL5]J::=Mk2
+R6
+31
+R28
+!i10b 1
+R16
+R34
+R35
+!i113 1
+R11
+R12

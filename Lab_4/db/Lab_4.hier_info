@@ -1,0 +1,1129 @@
+|DUT
+input_vector[0] => BCD_Sub:add_instance.B[0]
+input_vector[1] => BCD_Sub:add_instance.B[1]
+input_vector[2] => BCD_Sub:add_instance.B[2]
+input_vector[3] => BCD_Sub:add_instance.B[3]
+input_vector[4] => BCD_Sub:add_instance.A[0]
+input_vector[5] => BCD_Sub:add_instance.A[1]
+input_vector[6] => BCD_Sub:add_instance.A[2]
+input_vector[7] => BCD_Sub:add_instance.A[3]
+output_vector[0] << BCD_Sub:add_instance.OUTPUT[0]
+output_vector[1] << BCD_Sub:add_instance.OUTPUT[1]
+output_vector[2] << BCD_Sub:add_instance.OUTPUT[2]
+output_vector[3] << BCD_Sub:add_instance.OUTPUT[3]
+output_vector[4] << BCD_Sub:add_instance.OUTPUT[4]
+
+
+|DUT|BCD_Sub:add_instance
+A[0] => Add_Sub:Box2.A[0]
+A[1] => Add_Sub:Box2.A[1]
+A[2] => Add_Sub:Box2.A[2]
+A[3] => Add_Sub:Box2.A[3]
+B[0] => Add_Sub:Box1.B[0]
+B[1] => Add_Sub:Box1.B[1]
+B[2] => Add_Sub:Box1.B[2]
+B[3] => Add_Sub:Box1.B[3]
+OUTPUT[0] <= Add_Sub:Box4.S[0]
+OUTPUT[1] <= Add_Sub:Box4.S[1]
+OUTPUT[2] <= Add_Sub:Box4.S[2]
+OUTPUT[3] <= Add_Sub:Box4.S[3]
+OUTPUT[4] <= Add_Sub:Box4.Cout
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1
+A[0] => fulladder:FA0.a
+A[1] => fulladder:FA1.a
+A[2] => fulladder:FA2.a
+A[3] => fulladder:FA3.a
+B[0] => XOR_2:XOR0.A
+B[1] => XOR_2:XOR1.A
+B[2] => XOR_2:XOR2.A
+B[3] => XOR_2:XOR3.A
+M => XOR_2:XOR0.B
+M => XOR_2:XOR1.B
+M => XOR_2:XOR2.B
+M => XOR_2:XOR3.B
+M => fulladder:FA0.cin
+S[0] <= fulladder:FA0.s
+S[1] <= fulladder:FA1.s
+S[2] <= fulladder:FA2.s
+S[3] <= fulladder:FA3.s
+Cout <= fulladder:FA3.cout
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|XOR_2:XOR0
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|XOR_2:XOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|XOR_2:XOR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|XOR_2:XOR3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA0
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA0|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA0|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA0|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA0|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA0|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA0|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA0|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA1
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA1|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA1|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA1|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA1|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA1|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA1|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA1|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA2
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA2|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA2|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA2|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA2|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA2|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA2|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA2|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA3
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA3|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA3|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA3|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA3|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA3|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA3|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box1|fulladder:FA3|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2
+A[0] => fulladder:FA0.a
+A[1] => fulladder:FA1.a
+A[2] => fulladder:FA2.a
+A[3] => fulladder:FA3.a
+B[0] => XOR_2:XOR0.A
+B[1] => XOR_2:XOR1.A
+B[2] => XOR_2:XOR2.A
+B[3] => XOR_2:XOR3.A
+M => XOR_2:XOR0.B
+M => XOR_2:XOR1.B
+M => XOR_2:XOR2.B
+M => XOR_2:XOR3.B
+M => fulladder:FA0.cin
+S[0] <= fulladder:FA0.s
+S[1] <= fulladder:FA1.s
+S[2] <= fulladder:FA2.s
+S[3] <= fulladder:FA3.s
+Cout <= fulladder:FA3.cout
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|XOR_2:XOR0
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|XOR_2:XOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|XOR_2:XOR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|XOR_2:XOR3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA0
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA0|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA0|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA0|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA0|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA0|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA0|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA0|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA1
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA1|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA1|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA1|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA1|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA1|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA1|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA1|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA2
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA2|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA2|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA2|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA2|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA2|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA2|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA2|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA3
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA3|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA3|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA3|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA3|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA3|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA3|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box2|fulladder:FA3|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|GT_9:GT9
+A => Y.IN0
+A => Y.IN0
+B => Y.IN1
+C => Y.IN1
+D => ~NO_FANOUT~
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|OR_2:OR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3
+A[0] => fulladder:FA0.a
+A[1] => fulladder:FA1.a
+A[2] => fulladder:FA2.a
+A[3] => fulladder:FA3.a
+B[0] => XOR_2:XOR0.A
+B[1] => XOR_2:XOR1.A
+B[2] => XOR_2:XOR2.A
+B[3] => XOR_2:XOR3.A
+M => XOR_2:XOR0.B
+M => XOR_2:XOR1.B
+M => XOR_2:XOR2.B
+M => XOR_2:XOR3.B
+M => fulladder:FA0.cin
+S[0] <= fulladder:FA0.s
+S[1] <= fulladder:FA1.s
+S[2] <= fulladder:FA2.s
+S[3] <= fulladder:FA3.s
+Cout <= fulladder:FA3.cout
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|XOR_2:XOR0
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|XOR_2:XOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|XOR_2:XOR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|XOR_2:XOR3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA0
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA0|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA0|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA0|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA0|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA0|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA0|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA0|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA1
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA1|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA1|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA1|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA1|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA1|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA1|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA1|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA2
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA2|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA2|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA2|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA2|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA2|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA2|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA2|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA3
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA3|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA3|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA3|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA3|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA3|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA3|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box3|fulladder:FA3|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|NOR_2:NOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4
+A[0] => fulladder:FA0.a
+A[1] => fulladder:FA1.a
+A[2] => fulladder:FA2.a
+A[3] => fulladder:FA3.a
+B[0] => XOR_2:XOR0.A
+B[1] => XOR_2:XOR1.A
+B[2] => XOR_2:XOR2.A
+B[3] => XOR_2:XOR3.A
+M => XOR_2:XOR0.B
+M => XOR_2:XOR1.B
+M => XOR_2:XOR2.B
+M => XOR_2:XOR3.B
+M => fulladder:FA0.cin
+S[0] <= fulladder:FA0.s
+S[1] <= fulladder:FA1.s
+S[2] <= fulladder:FA2.s
+S[3] <= fulladder:FA3.s
+Cout <= fulladder:FA3.cout
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|XOR_2:XOR0
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|XOR_2:XOR1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|XOR_2:XOR2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|XOR_2:XOR3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA0
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA0|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA0|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA0|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA0|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA0|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA0|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA0|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA1
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA1|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA1|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA1|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA1|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA1|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA1|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA1|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA2
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA2|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA2|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA2|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA2|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA2|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA2|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA2|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA3
+a => halfadder:half1.a
+b => halfadder:half1.b
+cin => halfadder:half2.b
+s <= halfadder:half2.s
+cout <= or_2:or1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA3|halfadder:half1
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA3|halfadder:half1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA3|halfadder:half1|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA3|halfadder:half2
+a => and_2:and1.A
+a => xor_2:xor1.A
+b => and_2:and1.B
+b => xor_2:xor1.B
+s <= xor_2:xor1.Y
+cout <= and_2:and1.Y
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA3|halfadder:half2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA3|halfadder:half2|XOR_2:xor1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|BCD_Sub:add_instance|Add_Sub:Box4|fulladder:FA3|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

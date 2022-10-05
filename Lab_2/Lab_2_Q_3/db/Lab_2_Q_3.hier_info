@@ -1,0 +1,412 @@
+|DUT
+input_vector[0] => DEMUX_3:add_instance.S_1
+input_vector[1] => DEMUX_3:add_instance.S_0
+input_vector[2] => DEMUX_3:add_instance.A_0
+input_vector[3] => DEMUX_3:add_instance.A_1
+input_vector[4] => DEMUX_3:add_instance.A_2
+input_vector[5] => DEMUX_3:add_instance.A_3
+output_vector[0] << DEMUX_3:add_instance.Y0
+output_vector[1] << DEMUX_3:add_instance.Y1
+output_vector[2] << DEMUX_3:add_instance.Y2
+output_vector[3] << DEMUX_3:add_instance.Y3
+output_vector[4] << DEMUX_3:add_instance.Y4
+output_vector[5] << DEMUX_3:add_instance.Y5
+output_vector[6] << DEMUX_3:add_instance.Y6
+output_vector[7] << DEMUX_3:add_instance.Y7
+output_vector[8] << DEMUX_3:add_instance.Y8
+output_vector[9] << DEMUX_3:add_instance.Y9
+output_vector[10] << DEMUX_3:add_instance.Y10
+output_vector[11] << DEMUX_3:add_instance.Y11
+output_vector[12] << DEMUX_3:add_instance.Y12
+output_vector[13] << DEMUX_3:add_instance.Y13
+output_vector[14] << DEMUX_3:add_instance.Y14
+output_vector[15] << DEMUX_3:add_instance.Y15
+
+
+|DUT|DEMUX_3:add_instance
+A_3 => DEMUX_1xx4:Demux_1.I_0
+A_2 => DEMUX_1xx4:Demux_2.I_0
+A_1 => DEMUX_1xx4:Demux_3.I_0
+A_0 => DEMUX_1xx4:Demux_4.I_0
+S_0 => DEMUX_1xx4:Demux_1.S_1
+S_0 => DEMUX_1xx4:Demux_2.S_1
+S_0 => DEMUX_1xx4:Demux_3.S_1
+S_0 => DEMUX_1xx4:Demux_4.S_1
+S_1 => DEMUX_1xx4:Demux_1.S_2
+S_1 => DEMUX_1xx4:Demux_2.S_2
+S_1 => DEMUX_1xx4:Demux_3.S_2
+S_1 => DEMUX_1xx4:Demux_4.S_2
+Y15 <= DEMUX_1xx4:Demux_1.Y_0
+Y14 <= DEMUX_1xx4:Demux_2.Y_0
+Y13 <= DEMUX_1xx4:Demux_3.Y_0
+Y12 <= DEMUX_1xx4:Demux_4.Y_0
+Y11 <= DEMUX_1xx4:Demux_1.Y_2
+Y10 <= DEMUX_1xx4:Demux_2.Y_2
+Y9 <= DEMUX_1xx4:Demux_3.Y_2
+Y8 <= DEMUX_1xx4:Demux_4.Y_2
+Y7 <= DEMUX_1xx4:Demux_1.Y_1
+Y6 <= DEMUX_1xx4:Demux_2.Y_1
+Y5 <= DEMUX_1xx4:Demux_3.Y_1
+Y4 <= DEMUX_1xx4:Demux_4.Y_1
+Y3 <= DEMUX_1xx4:Demux_1.Y_3
+Y2 <= DEMUX_1xx4:Demux_2.Y_3
+Y1 <= DEMUX_1xx4:Demux_3.Y_3
+Y0 <= DEMUX_1xx4:Demux_4.Y_3
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_1
+I_0 => DEMUX:Demux_1.D
+S_2 => DEMUX:Demux_2.S
+S_2 => DEMUX:Demux_3.S
+S_1 => DEMUX:Demux_1.S
+Y_3 <= DEMUX:Demux_2.I_0
+Y_2 <= DEMUX:Demux_2.I_1
+Y_1 <= DEMUX:Demux_3.I_0
+Y_0 <= DEMUX:Demux_3.I_1
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_1|DEMUX:Demux_1
+S => INVERTER:INV1.A
+S => AND_2:AND2.A
+D => AND_2:AND1.B
+D => AND_2:AND2.B
+I_0 <= AND_2:AND1.Y
+I_1 <= AND_2:AND2.Y
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_1|DEMUX:Demux_1|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_1|DEMUX:Demux_1|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_1|DEMUX:Demux_1|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_1|DEMUX:Demux_2
+S => INVERTER:INV1.A
+S => AND_2:AND2.A
+D => AND_2:AND1.B
+D => AND_2:AND2.B
+I_0 <= AND_2:AND1.Y
+I_1 <= AND_2:AND2.Y
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_1|DEMUX:Demux_2|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_1|DEMUX:Demux_2|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_1|DEMUX:Demux_2|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_1|DEMUX:Demux_3
+S => INVERTER:INV1.A
+S => AND_2:AND2.A
+D => AND_2:AND1.B
+D => AND_2:AND2.B
+I_0 <= AND_2:AND1.Y
+I_1 <= AND_2:AND2.Y
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_1|DEMUX:Demux_3|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_1|DEMUX:Demux_3|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_1|DEMUX:Demux_3|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_2
+I_0 => DEMUX:Demux_1.D
+S_2 => DEMUX:Demux_2.S
+S_2 => DEMUX:Demux_3.S
+S_1 => DEMUX:Demux_1.S
+Y_3 <= DEMUX:Demux_2.I_0
+Y_2 <= DEMUX:Demux_2.I_1
+Y_1 <= DEMUX:Demux_3.I_0
+Y_0 <= DEMUX:Demux_3.I_1
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_2|DEMUX:Demux_1
+S => INVERTER:INV1.A
+S => AND_2:AND2.A
+D => AND_2:AND1.B
+D => AND_2:AND2.B
+I_0 <= AND_2:AND1.Y
+I_1 <= AND_2:AND2.Y
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_2|DEMUX:Demux_1|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_2|DEMUX:Demux_1|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_2|DEMUX:Demux_1|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_2|DEMUX:Demux_2
+S => INVERTER:INV1.A
+S => AND_2:AND2.A
+D => AND_2:AND1.B
+D => AND_2:AND2.B
+I_0 <= AND_2:AND1.Y
+I_1 <= AND_2:AND2.Y
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_2|DEMUX:Demux_2|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_2|DEMUX:Demux_2|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_2|DEMUX:Demux_2|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_2|DEMUX:Demux_3
+S => INVERTER:INV1.A
+S => AND_2:AND2.A
+D => AND_2:AND1.B
+D => AND_2:AND2.B
+I_0 <= AND_2:AND1.Y
+I_1 <= AND_2:AND2.Y
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_2|DEMUX:Demux_3|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_2|DEMUX:Demux_3|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_2|DEMUX:Demux_3|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_3
+I_0 => DEMUX:Demux_1.D
+S_2 => DEMUX:Demux_2.S
+S_2 => DEMUX:Demux_3.S
+S_1 => DEMUX:Demux_1.S
+Y_3 <= DEMUX:Demux_2.I_0
+Y_2 <= DEMUX:Demux_2.I_1
+Y_1 <= DEMUX:Demux_3.I_0
+Y_0 <= DEMUX:Demux_3.I_1
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_3|DEMUX:Demux_1
+S => INVERTER:INV1.A
+S => AND_2:AND2.A
+D => AND_2:AND1.B
+D => AND_2:AND2.B
+I_0 <= AND_2:AND1.Y
+I_1 <= AND_2:AND2.Y
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_3|DEMUX:Demux_1|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_3|DEMUX:Demux_1|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_3|DEMUX:Demux_1|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_3|DEMUX:Demux_2
+S => INVERTER:INV1.A
+S => AND_2:AND2.A
+D => AND_2:AND1.B
+D => AND_2:AND2.B
+I_0 <= AND_2:AND1.Y
+I_1 <= AND_2:AND2.Y
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_3|DEMUX:Demux_2|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_3|DEMUX:Demux_2|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_3|DEMUX:Demux_2|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_3|DEMUX:Demux_3
+S => INVERTER:INV1.A
+S => AND_2:AND2.A
+D => AND_2:AND1.B
+D => AND_2:AND2.B
+I_0 <= AND_2:AND1.Y
+I_1 <= AND_2:AND2.Y
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_3|DEMUX:Demux_3|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_3|DEMUX:Demux_3|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_3|DEMUX:Demux_3|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_4
+I_0 => DEMUX:Demux_1.D
+S_2 => DEMUX:Demux_2.S
+S_2 => DEMUX:Demux_3.S
+S_1 => DEMUX:Demux_1.S
+Y_3 <= DEMUX:Demux_2.I_0
+Y_2 <= DEMUX:Demux_2.I_1
+Y_1 <= DEMUX:Demux_3.I_0
+Y_0 <= DEMUX:Demux_3.I_1
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_4|DEMUX:Demux_1
+S => INVERTER:INV1.A
+S => AND_2:AND2.A
+D => AND_2:AND1.B
+D => AND_2:AND2.B
+I_0 <= AND_2:AND1.Y
+I_1 <= AND_2:AND2.Y
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_4|DEMUX:Demux_1|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_4|DEMUX:Demux_1|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_4|DEMUX:Demux_1|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_4|DEMUX:Demux_2
+S => INVERTER:INV1.A
+S => AND_2:AND2.A
+D => AND_2:AND1.B
+D => AND_2:AND2.B
+I_0 <= AND_2:AND1.Y
+I_1 <= AND_2:AND2.Y
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_4|DEMUX:Demux_2|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_4|DEMUX:Demux_2|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_4|DEMUX:Demux_2|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_4|DEMUX:Demux_3
+S => INVERTER:INV1.A
+S => AND_2:AND2.A
+D => AND_2:AND1.B
+D => AND_2:AND2.B
+I_0 <= AND_2:AND1.Y
+I_1 <= AND_2:AND2.Y
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_4|DEMUX:Demux_3|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_4|DEMUX:Demux_3|AND_2:AND1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|DEMUX_3:add_instance|DEMUX_1xx4:Demux_4|DEMUX:Demux_3|AND_2:AND2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

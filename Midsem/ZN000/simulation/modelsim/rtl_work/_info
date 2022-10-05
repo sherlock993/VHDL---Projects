@@ -1,0 +1,702 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/simulation/modelsim
+Eadd_sub
+Z1 w1661084429
+Z2 DPx4 work 5 gates 0 22 hY[;oAoBY6S8;XXJ`m>hQ2
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 3
+R0
+Z5 8D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/ADD_SUB.vhd
+Z6 FD:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/ADD_SUB.vhd
+l0
+L6 1
+ViKjeoE[2hkOFkP[S<mdAU1
+!s100 j^DoD`R6bJA;<ITNV2kcZ2
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1663772893
+!i10b 1
+Z9 !s108 1663772893.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/ADD_SUB.vhd|
+Z11 !s107 D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/ADD_SUB.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Astruct
+Z14 DEx4 work 9 fulladder 0 22 >LkeeiR:YZ0[63:WL3k4N2
+R2
+R3
+R4
+DEx4 work 7 add_sub 0 22 iKjeoE[2hkOFkP[S<mdAU1
+!i122 3
+l23
+L13 28
+V9KNeDAljX@LfcB>HSC3F^3
+!s100 @IF8]n:OXS:Sa1mJ4Bc<P3
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eand_2
+Z15 w1663768093
+R3
+R4
+!i122 0
+R0
+Z16 8D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/Gates.vhdl
+Z17 FD:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/Gates.vhdl
+l0
+L64 1
+VjaU0Sh88EohKdo203EgPi1
+!s100 N56j@fdZb1A6:bWCYVGI`1
+R7
+31
+Z18 !s110 1663772892
+!i10b 1
+Z19 !s108 1663772892.000000
+Z20 !s90 -reportprogress|300|-93|-work|work|D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/Gates.vhdl|
+Z21 !s107 D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/Gates.vhdl|
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+Z22 DEx4 work 5 and_2 0 22 jaU0Sh88EohKdo203EgPi1
+!i122 0
+l69
+L68 4
+V[GIMQQZOZ2XZR_eW?l0b40
+!s100 kSV>iKaZ2J^NnX_ej8_oW0
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Eand_4
+R15
+R3
+R4
+!i122 0
+R0
+R16
+R17
+l0
+L75 1
+VhMRam@:4JzMF^AzXT?NDc1
+!s100 WA2jL2R8`k]PAi<NGgBo_3
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 5 and_4 0 22 hMRam@:4JzMF^AzXT?NDc1
+!i122 0
+l80
+L79 4
+V;GjW3ldRL1@<ScbZo9QYE3
+!s100 S:CR2G3XCefne=hmd7]Rf1
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Edut
+Z23 w1663767303
+R3
+R4
+!i122 1
+R0
+Z24 8D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/DUT.vhdl
+Z25 FD:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/DUT.vhdl
+l0
+L7 1
+V_idG[;D^oOS9zYUB`>1lA2
+!s100 d:0B[VK:5ngi]`^cM^EMn1
+R7
+31
+R8
+!i10b 1
+R9
+Z26 !s90 -reportprogress|300|-93|-work|work|D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/DUT.vhdl|
+Z27 !s107 D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/DUT.vhdl|
+!i113 1
+R12
+R13
+Adutwrap
+R3
+R4
+DEx4 work 3 dut 0 22 _idG[;D^oOS9zYUB`>1lA2
+!i122 1
+l16
+L12 23
+V=o^;i`CVgWmUOl=dF38GD2
+!s100 z095edg;?aGG4`<zVnhcI2
+R7
+31
+R8
+!i10b 1
+R9
+R26
+R27
+!i113 1
+R12
+R13
+Efull_adder
+R15
+R3
+R4
+!i122 0
+R0
+R16
+R17
+l0
+L154 1
+VhUARKW_BfY[h[R8<CYi[e0
+!s100 Wm_Wo^hNe:gOeNAHYn[WQ3
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 10 full_adder 0 22 hUARKW_BfY[h[R8<CYi[e0
+!i122 0
+l159
+L158 5
+VP;mb]IHb?mz3j:9aihHjU0
+!s100 9N0=I769=CV0EJ]UN0<=h0
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Efulladder
+Z28 w1661080918
+R2
+R3
+R4
+!i122 2
+R0
+Z29 8D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/Full_add.vhdl
+Z30 FD:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/Full_add.vhdl
+l0
+L35 1
+V>LkeeiR:YZ0[63:WL3k4N2
+!s100 YY=n^I`Eg4V9Wn5IfEOza0
+R7
+31
+R8
+!i10b 1
+R9
+Z31 !s90 -reportprogress|300|-93|-work|work|D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/Full_add.vhdl|
+Z32 !s107 D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/Full_add.vhdl|
+!i113 1
+R12
+R13
+Atrivial
+Z33 DEx4 work 9 halfadder 0 22 >NHmdMP3lO8oko>Z5;@_N0
+Z34 DEx4 work 4 or_2 0 22 I`m4zX7>kGdQzAJkZ5<T<2
+R2
+R3
+R4
+R14
+!i122 2
+l55
+L40 25
+VM[?7JhE<]@5iaMGn`<cZ<2
+!s100 3HMMG:oRV5I2fJEB=DNPe3
+R7
+31
+R8
+!i10b 1
+R9
+R31
+R32
+!i113 1
+R12
+R13
+Pgates
+R3
+R4
+!i122 0
+R15
+R0
+R16
+R17
+l0
+L7 1
+VhY[;oAoBY6S8;XXJ`m>hQ2
+!s100 4Ba4la10f8<fl=b><TZL`1
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Ehalf_adder
+R15
+R3
+R4
+!i122 0
+R0
+R16
+R17
+l0
+L142 1
+V;X>W]Yfd:`O?HcjnSh:gD3
+!s100 9h[RgQKM3S7SA7dHc_C=j2
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 10 half_adder 0 22 ;X>W]Yfd:`O?HcjnSh:gD3
+!i122 0
+l147
+L146 5
+V^A@o5k^TM>K77EeelCXKQ0
+!s100 X;oR37kn6i6mi:=]BXfGF0
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Ehalfadder
+R28
+R2
+R3
+R4
+!i122 2
+R0
+R29
+R30
+l0
+L7 1
+V>NHmdMP3lO8oko>Z5;@_N0
+!s100 f`i3gAFZllG6HY;lVg1EA0
+R7
+31
+R8
+!i10b 1
+R9
+R31
+R32
+!i113 1
+R12
+R13
+Atrivial
+Z35 DEx4 work 5 xor_2 0 22 0JWYJ^^MM<D[Y3QCO?zEV2
+R22
+R2
+R3
+R4
+R33
+!i122 2
+l21
+L12 16
+VYo]_HkK5gCIdKAmB`ZSmG0
+!s100 UVE:S5n_k:fe7Wln69bWH3
+R7
+31
+R8
+!i10b 1
+R9
+R31
+R32
+!i113 1
+R12
+R13
+Einverter
+R15
+R3
+R4
+!i122 0
+R0
+R16
+R17
+l0
+L52 1
+VlMf5kg<H;A44><:H3@P7o1
+!s100 Cn9dGON;BMa:jQ_hY3Oh10
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 8 inverter 0 22 lMf5kg<H;A44><:H3@P7o1
+!i122 0
+l57
+L56 4
+Vacb>1m39];LDC@igehO][0
+!s100 a<Q66]=ZcABhF70<7OPn>3
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Enand_2
+R15
+R3
+R4
+!i122 0
+R0
+R16
+R17
+l0
+L86 1
+V2k0888AiD0j^8aE:4Oe5<1
+!s100 ;^]fK6BQ4bS1i`K434DGH0
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 6 nand_2 0 22 2k0888AiD0j^8aE:4Oe5<1
+!i122 0
+l91
+L90 4
+VZU[SCnbh]7A_J?TVCg2i60
+!s100 7Bj`oYKH3G8=lQ[T24:ol0
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Enor_2
+R15
+R3
+R4
+!i122 0
+R0
+R16
+R17
+l0
+L108 1
+V2ZeZ<H7l<AL2Oi`=Pi^CF2
+!s100 kTXFQLiYI=nIB8Vjbo6I^1
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 5 nor_2 0 22 2ZeZ<H7l<AL2Oi`=Pi^CF2
+!i122 0
+l113
+L112 4
+V_k9^kjhaQob0V;I@2Udol3
+!s100 6E]_M^XD^zi4dCZGbhR943
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Eor_2
+R15
+R3
+R4
+!i122 0
+R0
+R16
+R17
+l0
+L97 1
+VI`m4zX7>kGdQzAJkZ5<T<2
+!s100 MQcb3Rai0J9AJcZ:T1:3A1
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+R34
+!i122 0
+l102
+L101 4
+Vd<]3D4zPjnl?3kK?=cMP13
+!s100 @45[8Je<FFVfz=LEJZbO?0
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Etestbench
+Z36 w1663766899
+R4
+R3
+!i122 5
+R0
+Z37 8D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/Testbench.vhdl
+Z38 FD:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R7
+31
+R8
+!i10b 1
+R9
+Z39 !s90 -reportprogress|300|-93|-work|work|D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/Testbench.vhdl|
+!s107 D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/Testbench.vhdl|
+!i113 1
+R12
+R13
+Abehave
+R4
+R3
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 5
+l69
+L9 132
+VM[JNc9INWP?:@2l;IVDDi3
+!s100 ?TPR7SG_ZOe:VmM03LnPB2
+R7
+31
+R8
+!i10b 1
+R9
+R39
+Z40 !s107 D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/Testbench.vhdl|
+!i113 1
+R12
+R13
+Exnor_2
+R15
+R3
+R4
+!i122 0
+R0
+R16
+R17
+l0
+L131 1
+VS^];OZzgjS=6in^:Ao8gC2
+!s100 n445N:h2K;QJ=TCcUIW1;0
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+DEx4 work 6 xnor_2 0 22 S^];OZzgjS=6in^:Ao8gC2
+!i122 0
+l136
+L135 4
+Vb?L3Ye4@CW^57hG[kb9kV2
+!s100 HcOPn@J9kC`676GZ`<4_=1
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Exor_2
+R15
+R3
+R4
+!i122 0
+R0
+R16
+R17
+l0
+L120 1
+V0JWYJ^^MM<D[Y3QCO?zEV2
+!s100 XI1<P7JEkF]cPknSMYJWH3
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Aequations
+R3
+R4
+R35
+!i122 0
+l125
+L124 4
+VMKni6N;YIHOfZSm1e3zCB0
+!s100 YdFBN1VhVMS`naX6Ea@<Y1
+R7
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Eznvlg
+Z41 w1663772717
+R2
+R3
+R4
+!i122 4
+R0
+Z42 8D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/ZNVLG.vhdl
+Z43 FD:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/ZNVLG.vhdl
+l0
+L5 1
+Vi3@JCTU3zj9ba3e19m9@>1
+!s100 iICzcX6f=ERLg4AYN8P:@3
+R7
+31
+R8
+!i10b 1
+R9
+Z44 !s90 -reportprogress|300|-93|-work|work|D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/ZNVLG.vhdl|
+Z45 !s107 D:/ACADEMICS/EE214/Quartus/Projects/Midsem/ZNVGL/ZNVLG.vhdl|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 5 znvlg 0 22 i3@JCTU3zj9ba3e19m9@>1
+!i122 4
+l21
+L9 42
+VcXjJ<LNmoW`;f2mZ`i;^]3
+!s100 ?nh2X90];n7L:JCaMoo;o0
+R7
+31
+R8
+!i10b 1
+R9
+R44
+R45
+!i113 1
+R12
+R13

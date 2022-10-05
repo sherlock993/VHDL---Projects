@@ -1,0 +1,107 @@
+# Reading pref.tcl
+# do Lab_6_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/v_jtag.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:34:55 on Sep 25,2022
+# vcom -reportprogress 300 -93 -work work D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/v_jtag.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity v_jtag
+# -- Compiling architecture rtl of v_jtag
+# End time: 19:34:55 on Sep 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/v_jtag.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:34:55 on Sep 25,2022
+# vcom -reportprogress 300 -93 -work work D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/v_jtag.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity v_jtag
+# -- Compiling architecture rtl of v_jtag
+# End time: 19:34:55 on Sep 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/TopLevel.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:34:55 on Sep 25,2022
+# vcom -reportprogress 300 -93 -work work D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/TopLevel.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TopLevel
+# -- Compiling architecture Struct of TopLevel
+# End time: 19:34:55 on Sep 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/DUT.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:34:55 on Sep 25,2022
+# vcom -reportprogress 300 -93 -work work D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/DUT.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 19:34:56 on Sep 25,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/Lab_6.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:34:56 on Sep 25,2022
+# vcom -reportprogress 300 -93 -work work D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/Lab_6.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity alu_beh
+# -- Compiling architecture a1 of alu_beh
+# End time: 19:34:56 on Sep 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/Testbench.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:34:56 on Sep 25,2022
+# vcom -reportprogress 300 -93 -work work D:/ACADEMICS/EE214/Quartus/Projects/Lab_6/Testbench.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 19:34:56 on Sep 25,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 19:34:58 on Sep 25,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading work.alu_beh(a1)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 4864 ns  Iteration: 0  Instance: /testbench
+run -continue
+run -continue
+run -continue
+run -continue
+# End time: 19:38:26 on Sep 25,2022, Elapsed time: 0:03:28
+# Errors: 0, Warnings: 0
